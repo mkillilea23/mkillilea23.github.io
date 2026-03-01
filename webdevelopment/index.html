@@ -15,17 +15,25 @@ Description: Index/Home page
    <title>Home</title> <!-- webapge title in browser tab -->
 
    <link rel="stylesheet" href="style.css"> <!-- link to external CSS for styling -->
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- links for fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>[logo] [navigation menu]</header> <!-- will later contain logo image and navigation links-->
     
-    <!-- Hero Section Start (background image) -->
-    <h1>Hi, I'm Molly!</h1> <!--inspiration: https://maggielxd.com/-->
-    <h2>Welcome to my portfolio. Here you'll find examples of human-centered instructional design work 
-        rooted in evidence based learning theory.</h2> <!-- different text style than h3 -->
-    <!-- CTA button here -->
-    <!-- Hero Section End -->
+    <section id="hero">
+        <div class="container">
+            <h1>Hi, I'm Molly!</h1> <!--inspiration: https://maggielxd.com/-->
+            <p>Welcome to my portfolio. Here you'll find examples of human-centered instructional design work rooted in evidence based learning theory.</p> <!-- different text style than other p -->
+            <a href="#">Let's Connect</a>
+        </div>
+    </section>
     
     <h3>My Purpose and Goals</h3>
     <p>I believe learning should make people feel capable, not confused. </p>
@@ -40,9 +48,9 @@ Description: Index/Home page
         Ultimately, I aim to create learning experiences that are not only effective, 
         but also respectful of learners’ time and needs.</p>
 
-    <blockquote><em>"Change is the end result of all true learning."</em> - Leo Buscaglia</blockquote> <!--center aligned; accent color-->
+    <blockquote>"Change is the end result of all true learning."<br>- Leo Buscaglia</blockquote> <!--center aligned; accent color-->
 
-    <footer><small>Molly Killilea - 2/15/2026</small></footer> <!-- bottom of page; will contain contact links/social media -->
+    <footer>Molly Killilea - 2/28/2026</footer> <!-- bottom of page; will contain contact links/social media -->
 </body>
 
 </html>
