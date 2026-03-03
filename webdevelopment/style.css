@@ -73,3 +73,19 @@ blockquote {
   font-size: 1.7em;
   font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
 }
+
+a {
+   color: #330F03;
+  font-size: 1.15em;
+  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  background-color: #BEC9F8;
+  border-radius: 60em;
+  border: none;
+  text-decoration: none;
+  padding: .5em 3em; 
+  display: inline-block;
+}
+
+a:hover {
+  background-color: lightblue; /*changes button to light blue on hover*/
+}
