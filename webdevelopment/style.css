@@ -1,12 +1,12 @@
-* {
+body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
 #hero {
-  width: 100vw;
-  height: 100vh;
+  width: auto;
+  height: 90vh;
   background: url(hero.jpg) no-repeat bottom/cover; /*changed background image to an original*/
 }
 
@@ -42,8 +42,9 @@
   text-decoration: none;
   padding: .5em 3em;
   display: inline-block;
-  width: 11.25em; /*prevents cta button from spanning whole width of container*/
- }
+  max-width: 5.5em; /*prevents cta button from spanning whole width of container*/
+  text-align: center;
+}
 
 .container a:hover {
   background-color: lightblue; /*changes button to light blue on hover*/
@@ -51,7 +52,7 @@
 
 h1 {
   color: #7D9028;
-  font-size: 2.5em;
+  font-size: 3em;
   font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-weight: 700;
 }
@@ -64,18 +65,25 @@ p {
 
 h3 {
   color: #00421C;
-  font-size: 1.7em;
+  font-size: 2.5em;
   font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+  margin-bottom: 1.5em;
 }
 
 blockquote {
   font-size: 1.7em;
   font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
 }
 
 a {
-   color: #330F03;
+  color: #330F03;
   font-size: 1.15em;
   font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   background-color: #BEC9F8;
@@ -84,8 +92,42 @@ a {
   text-decoration: none;
   padding: .5em 3em; 
   display: inline-block;
+  text-align: center;
 }
 
 a:hover {
   background-color: lightblue; /*changes button to light blue on hover*/
+}
+
+.education {
+  display: flex;
+  margin: 3em;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 1em
+}
+
+.education ul {
+  color: #330F03;
+  font-size: 1.15em;
+  font-family: Nunito, Calibri, sans-serif;
+  list-style-type: none;
+  margin: 1em;
+  text-align: center;
+  width: 25em;
+  padding: 0;
+}
+
+.education p {
+  text-align: center;
+  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.edu {
+  background-color: #7D9028;
+  border-radius: 2.5em;
+  padding-top: 4em;
+  padding-bottom: 4em;
 }
