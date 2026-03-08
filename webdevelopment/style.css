@@ -1,54 +1,10 @@
-body {
+body{
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  background-color: #FFFFFA;
 }
 
-#hero {
-  width: auto;
-  height: 90vh;
-  background: url(hero.jpg) no-repeat bottom/cover; /*changed background image to an original*/
-}
-
-.container {
-  width: 90%;
-  height: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.container h1 {
-  margin-bottom: .3em;
-  font-size: 5em;
-} /*want to add curved underline/swoosh -- still figuring this out*/
-
-.container p {
-  color: #FFFFFA;
-  margin-bottom: 2em;
-  font-size: 1.75em;
-  max-width: 80%;
-}
-
-.container a {
-  color: #330F03;
-  font-size: 2em;
-  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-  background-color: #BEC9F8;
-  border-radius: 60em;
-  border: none;
-  text-decoration: none;
-  padding: .5em 3em;
-  display: inline-block;
-  max-width: 5.5em; /*prevents cta button from spanning whole width of container*/
-  text-align: center;
-}
-
-.container a:hover {
-  background-color: lightblue; /*changes button to light blue on hover*/
-}
+/* ⌄⌄⌄ DEFAULT STYLING ⌄⌄⌄ */
 
 h1 {
   color: #7D9028;
@@ -91,23 +47,65 @@ a {
   border: none;
   text-decoration: none;
   padding: .5em 3em; 
-  display: inline-block;
+  display: flex;
   text-align: center;
+  max-width: 9em
 }
 
 a:hover {
   background-color: lightblue; /*changes button to light blue on hover*/
 }
 
-.education {
+/* ^^^ DEFAULT STYLING ^^^ */
+
+/* ⌄⌄⌄ HOME PAGE ⌄⌄⌄ */
+
+#herosection {
+  width: auto;
+  height: 90vh;
+  background: url(hero.jpg) no-repeat bottom/cover;
+}
+
+.hero {
+  width: 90%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  margin-bottom: .3em;
+  font-size: 5em;
+} /*want to add curved underline/swoosh -- still figuring this out*/
+
+.hero p {
+  color: #FFFFFA;
+  margin-bottom: 2em;
+  font-size: 1.75em;
+  max-width: 80%;
+}
+
+.hero a {
+  font-size: 2em;
+  max-width: 5.5em;
+}
+
+/* ^^^ HOME PAGE ^^^ */
+
+/* ⌄⌄⌄ ABOUT PAGE ⌄⌄⌄ */
+
+#education {
   display: flex;
   margin: 3em;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 1em
 }
 
-.education ul {
+#education ul {
   color: #330F03;
   font-size: 1.15em;
   font-family: Nunito, Calibri, sans-serif;
@@ -118,7 +116,7 @@ a:hover {
   padding: 0;
 }
 
-.education p {
+#education p {
   text-align: center;
   font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-weight: 500;
@@ -131,3 +129,5 @@ a:hover {
   padding-top: 4em;
   padding-bottom: 4em;
 }
+
+/* ^^^ ABOUT PAGE ^^^ */
