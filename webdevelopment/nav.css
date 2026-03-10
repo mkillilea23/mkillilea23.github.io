@@ -9,41 +9,56 @@ header {
     top: 0;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 70px;
-    padding: 0;
-    margin-right: 4em;
-    margin-left: 4em;
-    font-size: 1.25em;
-    font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-}
-
-header a {
-    color: #FFFFFA;
-    text-decoration: none;
-    background: none;
-    padding: 0;
-    border-radius: 0;
-}
-
-header a:hover {
-    color:#BEC9F8;
-    background: none;
-}
-
-header a:active {
-    color: lightblue;
-}
-
 img {
     max-height: 5em;
     margin-left: 2.5em;
-    margin-right: 2em;
     padding-top: .2em;
-    padding-bottom: .2em;  
+    padding-bottom: .2em;    
 }
 
+nav ul {
+    display: flex;
+    list-style: none;
+    font-size: 1.25em;
+    font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    margin-right: 2.5em;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    color: #FFFFFA;
+    text-decoration: none;
+    background: none;
+    padding: 0em 1.5em;
+}
+
+nav a:hover {
+    color: #BEC9F8;
+    background: none;
+}
+
+nav a:active {
+    color: #d39d0e;
+}
+
+.dropdown {
+    width: 100%;
+    position: absolute;
+    background-color: #00421C;
+    flex-direction: column;
+    font-size: .9em;
+    padding: 1em 0em;
+    gap: 1em;
+    align-items: center;
+    display: none;
+}
+
+/* Show dropdown on hover */
+nav ul li:hover .dropdown {
+    display: flex;
+}
 
 
