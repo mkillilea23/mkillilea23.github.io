@@ -9,6 +9,16 @@ header {
     top: 0;
 }
 
+header a {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+header a:hover {
+    background: none;
+}
+
 img {
     max-height: 5em;
     margin-left: 2.5em;

@@ -8,15 +8,18 @@ body{
 
 h1 {
   color: #7D9028;
-  font-size: 3em;
+  font-size: 3.25em;
   font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
 }
 
 p {
   color: #330F03;
   font-size: 1.15em;
   font-family: Nunito, Calibri, sans-serif;
+  text-align: justify;
 }
 
 h3 {
@@ -28,6 +31,15 @@ h3 {
   justify-content: center;
   margin-top: 3em;
   margin-bottom: 1.5em;
+}
+
+h2 {
+  color: #00421C;
+  font-size: 2em;
+  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
 }
 
 blockquote {
@@ -79,6 +91,7 @@ a:hover {
 .hero h1 {
   margin-bottom: .3em;
   font-size: 5em;
+  justify-content: left;
 } /*want to add curved underline/swoosh -- still figuring this out*/
 
 .hero p {
@@ -86,6 +99,7 @@ a:hover {
   margin-bottom: 2em;
   font-size: 1.75em;
   max-width: 80%;
+  text-align: left;
 }
 
 .hero a {
@@ -131,3 +145,42 @@ a:hover {
 }
 
 /* ^^^ ABOUT PAGE ^^^ */
+
+/* ⌄⌄⌄ REFLECTION PAGE ⌄⌄⌄ */
+
+#reflect {
+  display: flex;
+}
+
+.left {
+  width: 50%;
+  margin-left: 5em;
+  margin-right: 1em;
+}
+
+.right {
+  width: 50%;
+  margin-right: 5em;
+  margin-left: 1em;
+}
+
+.right h2 {
+  text-align: center;
+  text-indent: 0;
+}
+
+.right {
+  text-indent: 1.5em; /* text-indent is not an allowable property for ::first-line --> https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::first-line#:~:text=the%20right%20margin.-,Allowable%20properties,-Only%20a%20small */
+}
+
+.first {
+  text-indent: 0;
+}
+
+.first::first-letter {
+  font-size: 1.5em;
+  color:#00421C;
+  font-weight: 600;
+}
+
+

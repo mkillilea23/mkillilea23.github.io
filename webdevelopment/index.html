@@ -3,9 +3,9 @@
 
 <!--
 Name: Molly Killilea
-Date: 2/15/2026
+Date: 3/14/2026
 Course: ISLT 7355 - Web Dev
-Description: Index/Home page
+Description: index.html
 -->
 
 <head>
@@ -15,6 +15,7 @@ Description: Index/Home page
    <title>Home</title> <!-- webapge title in browser tab -->
 
    <link rel="stylesheet" href="style.css"> <!-- link to external CSS for styling -->
+   <link rel="stylesheet" href="nav.css">
    
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- links for fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,32 +26,50 @@ Description: Index/Home page
 </head>
 
 <body>
-    <header>[logo] [navigation menu]</header> <!-- will later contain logo image and navigation links-->
+   <header>
+       <a href="index.html"><img src="logo.png" alt="Site Logo"></a> <!-- links logo back to home page -->
 
-<main>  
-    <section id="herosection">
-        <div class="hero">
-            <h1>Hi, I'm Molly!</h1> <!--inspiration: https://maggielxd.com/-->
-            <p>Welcome to my portfolio. Here you'll find examples of human-centered instructional design work rooted in evidence based learning theory.</p>
-            <a href="#">Let's Connect</a>
-        </div>
-    </section>
-    
-    <h3>My Purpose and Goals</h3>
-    <p>I believe learning should make people feel capable, not confused. </p>
-    <p>My goal as an instructional designer is to create engaging and purposeful learning experiences 
-        that help make complex information more accessible. My academic and professional background has 
-        shaped how I think about learning as an active, lifelong process that is shaped by one’s individuality. 
-        Lived experiences, motivation, adaptability, previous knowledge – there are so many factors that impact learning. 
-        Through my instructional design coursework, I am developing the skills to create solutions 
-        that address these real and varying learning influences.</p>
-    <p>I am particularly interested in designing instruction that empowers learners in higher education environments, 
-        where having access to well-designed information can directly impact student success. 
-        Ultimately, I aim to create learning experiences that are not only effective, 
-        but also respectful of learners’ time and needs.</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a>
+                     <ul class="dropdown">
+                        <li><a href="#">Project 1</a></li>
+                        <li><a href="#">Project 2</a></li>
+                        <li><a href="#">Project 3</a></li>
+                    </ul>
+                </li>    
+                <li><a href="reflecting.html">Reflecting</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <blockquote>"Change is the end result of all true learning."<br>- Leo Buscaglia</blockquote> <!--center aligned; accent color-->
-</main>
+    <main>  
+        <section id="herosection">
+            <div class="hero">
+                <h1>Hi, I'm Molly!</h1>
+                <p>Welcome to my portfolio. Here you'll find examples of human-centered instructional design work rooted in evidence based learning theory.</p>
+                <a href="#">Let's Connect</a>
+            </div>
+        </section>
+        
+        <h3>My Purpose and Goals</h3>
+        <p>I believe learning should make people feel capable, not confused. </p>
+        <p>My goal as an instructional designer is to create engaging and purposeful learning experiences 
+            that help make complex information more accessible. My academic and professional background has 
+            shaped how I think about learning as an active, lifelong process that is shaped by one’s individuality. 
+            Lived experiences, motivation, adaptability, previous knowledge – there are so many factors that impact learning. 
+            Through my instructional design coursework, I am developing the skills to create solutions 
+            that address these real and varying learning influences.</p>
+        <p>I am particularly interested in designing instruction that empowers learners in higher education environments, 
+            where having access to well-designed information can directly impact student success. 
+            Ultimately, I aim to create learning experiences that are not only effective, 
+            but also respectful of learners’ time and needs.</p>
+
+        <blockquote>"Change is the end result of all true learning."<br>- Leo Buscaglia</blockquote> <!--center aligned; accent color-->
+    </main>
 
     <footer>Molly Killilea - 2/28/2026</footer> <!-- bottom of page; will contain contact links/social media -->
 </body>

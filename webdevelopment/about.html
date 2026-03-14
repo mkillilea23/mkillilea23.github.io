@@ -3,9 +3,9 @@
 
 <!--
 Name: Molly Killilea
-Date: 2/15/2026
+Date: 3/14/2026
 Course: ISLT 7355 - Web Dev
-Description: About page
+Description: about.html
 -->
 
 <head>
@@ -15,6 +15,7 @@ Description: About page
    <title>About Me</title> <!-- webapge title in browser tab -->
 
    <link rel="stylesheet" href="style.css"> <!-- link to external CSS for styling -->
+   <link rel="stylesheet" href="nav.css">
 
    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- links for fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,69 +26,87 @@ Description: About page
 </head>
 
 <body>
-     <header>[logo] [navigation menu]</header> <!-- will later contain logo image and navigation links-->
-   
-<main> 
-    <h1>About Me:</h1> <!-- page heading -->
-    
-    <!-- headshot will be added to this section -->
-    <p>I’m currently a graduate student at the University of Missouri, pursuing my Master of Science in Learning Technologies and Design. 
-        I hope to graduate in Spring 2027 and establish a career as an instructional designer!</p>
-    <p>I originally went to school for speech pathology, graduating from Kansas State University with my Bachelor of Science degree in Fall 2021. 
-        After completing half of a master's degree in speech language pathology, however, I realized it wasn't quite the right fit for me. </p>
-    <p>I then found my way into higher education, and I now work full-time as an academic advisor 
-        for undergraduate students at the University of Missouri-Kansas City. I thoroughly enjoy being a guide for students 
-        and encouraging them in their academic and career goals.</p>
-    <p>Through these experiences, I have discovered that I have a desire to create meaningful, engaging, and 
-        accessible learning experiences for others, which is what led me to my current educational pursuit. </p>
-    <p>In my free time I really enjoy reading, crafting, and most of all, traveling (I've been to 21 countries so far!). 
-        Throughout this program, I hope to leverage my creative side with my passion for supporting others 
-        as I prepare to enter the field of instructional design.</p> <!-- potentially updating this content still -->
-    
-    <!-- resume video here -->
+    <header>
+       <a href="index.html"><img src="logo.png" alt="Site Logo"></a> <!-- links logo back to home page -->
 
-    <h3>Education</h3>
-
-    <section id="education">
-        <div class="edu">
-        <p><strong>University of Missouri</strong></p>
+        <nav>
             <ul>
-                <li>August 2025 - Present</li>
-                <li><em>Columbia, MO</em></li>
-                <li>---</li>
-                <li>Master of Science in<br>Learning Technologies and Design</li>
-                <li>---</li>
-                <li>Anticipated Graduation: May 2027</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a>
+                     <ul class="dropdown">
+                        <li><a href="#">Project 1</a></li>
+                        <li><a href="#">Project 2</a></li>
+                        <li><a href="#">Project 3</a></li>
+                    </ul>
+                </li>    
+                <li><a href="reflecting.html">Reflecting</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
+        </nav>
+    </header>
 
-        <div class="edu">
-        <p><strong>Saint Mary's College</strong></p>
-            <ul>
-                <li>August 2022 - May 2023</li>
-                <li><em>Notre Dame, IN</em></li>
-                <li>---</li>
-                <li>Master of Science in<br>Speech Language Pathology</li>
-                <li>---</li>
-                <li>Completed 33 graduate credits</li>
-            </ul>
-        </div>
+    <main> 
+        <h1>About Me:</h1> <!-- page heading -->
+        
+        <!-- headshot will be added to this section -->
+        <p>I’m currently a graduate student at the University of Missouri, pursuing my Master of Science in Learning Technologies and Design. 
+            I hope to graduate in Spring 2027 and establish a career as an instructional designer!</p>
+        <p>I originally went to school for speech pathology, graduating from Kansas State University with my Bachelor of Science degree in Fall 2021. 
+            After completing half of a master's degree in speech language pathology, however, I realized it wasn't quite the right fit for me. </p>
+        <p>I then found my way into higher education, and I now work full-time as an academic advisor 
+            for undergraduate students at the University of Missouri-Kansas City. I thoroughly enjoy being a guide for students 
+            and encouraging them in their academic and career goals.</p>
+        <p>Through these experiences, I have discovered that I have a desire to create meaningful, engaging, and 
+            accessible learning experiences for others, which is what led me to my current educational pursuit. </p>
+        <p>In my free time I really enjoy reading, crafting, and most of all, traveling (I've been to 21 countries so far!). 
+            Throughout this program, I hope to leverage my creative side with my passion for supporting others 
+            as I prepare to enter the field of instructional design.</p> <!-- potentially updating this content still -->
+        
+        <!-- resume video here -->
 
-        <div class="edu">
-        <p><strong>Kansas State University</strong></p>
-            <ul>
-                <li>August 2018 - December 2021</li>
-                <li><em>Manhattan, KS</em></li>
-                <li>---</li>
-                <li>Bachelor of Science in<br>Communication Sciences and Disorders</li>
-                <li>---</li>
-                <li>Graduated <em>summa cum laude</em></li>
-            </ul>  
-        </div>
-    </section>
-    
-     <a href="webcontent/KillileaResume.pdf" target="_blank">Check Out My Resume</a> <!-- link to PDF resume  -->
-</main>  
+        <h3>Education</h3>
+
+        <section id="education">
+            <div class="edu">
+            <p><strong>University of Missouri</strong></p>
+                <ul>
+                    <li>August 2025 - Present</li>
+                    <li><em>Columbia, MO</em></li>
+                    <li>---</li>
+                    <li>Master of Science in<br>Learning Technologies and Design</li>
+                    <li>---</li>
+                    <li>Anticipated Graduation: May 2027</li>
+                </ul>
+            </div>
+
+            <div class="edu">
+            <p><strong>Saint Mary's College</strong></p>
+                <ul>
+                    <li>August 2022 - May 2023</li>
+                    <li><em>Notre Dame, IN</em></li>
+                    <li>---</li>
+                    <li>Master of Science in<br>Speech Language Pathology</li>
+                    <li>---</li>
+                    <li>Completed 33 graduate credits</li>
+                </ul>
+            </div>
+
+            <div class="edu">
+            <p><strong>Kansas State University</strong></p>
+                <ul>
+                    <li>August 2018 - December 2021</li>
+                    <li><em>Manhattan, KS</em></li>
+                    <li>---</li>
+                    <li>Bachelor of Science in<br>Communication Sciences and Disorders</li>
+                    <li>---</li>
+                    <li>Graduated <em>summa cum laude</em></li>
+                </ul>  
+            </div>
+        </section>
+        
+        <a href="webcontent/KillileaResume.pdf" target="_blank">Check Out My Resume</a> <!-- link to PDF resume  -->
+    </main>  
 
     <footer>Molly Killilea - 3/3/2026</footer> <!-- bottom of page; will contain contact links/social media -->
 </body>
