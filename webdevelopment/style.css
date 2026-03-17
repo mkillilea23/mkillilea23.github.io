@@ -111,9 +111,12 @@ a:hover {
 
 /* ⌄⌄⌄ ABOUT PAGE ⌄⌄⌄ */
 
+#about-main {
+  margin: 3em;
+}
+
 #education {
   display: flex;
-  margin: 3em;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1em
@@ -142,6 +145,37 @@ a:hover {
   border-radius: 2.5em;
   padding-top: 4em;
   padding-bottom: 4em;
+}
+
+#bio img {
+  width: 500px;
+  height: auto;
+  min-width: 250px;
+  max-width: 45vw;  /* responsive */
+  max-height: 55vh; /* responsive */
+  padding: .5em;
+  border-radius: 1.5em;
+  background-color: #330F03;
+  margin: 2em;
+}
+
+#bio {
+  margin-bottom: 5em;
+}
+
+.video {
+  background-color: #00421C;
+  padding: 4em;
+  border-radius: 2.5em;
+  display: flex;
+  max-width: 60vw;
+  justify-content: center;
+}
+
+.video video {
+  width: 60vw;
+  height: auto;
+
 }
 
 /* ^^^ ABOUT PAGE ^^^ */
@@ -183,4 +217,4 @@ a:hover {
   font-weight: 600;
 }
 
-
+/* ^^^ REFLECTION PAGE ^^^ */
