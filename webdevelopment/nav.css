@@ -71,4 +71,8 @@ nav ul li:hover .dropdown {
     display: flex;
 }
 
-
+@media print {
+    header {
+        display: none;
+    }
+}
