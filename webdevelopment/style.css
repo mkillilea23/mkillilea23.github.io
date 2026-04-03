@@ -199,11 +199,11 @@ a:hover {
 
   #about-main h1, #about-main p, #about-main h3, #education ul, #education p, .edu, .video, video, div, #bio {
     padding: 0 0;
-    gap: none;
+    gap: 0;
   }
 
   #bio, .edu, h1 {
-    margin: 0;
+    margin: 0em;
   }
 
   h3 {
@@ -222,6 +222,17 @@ a:hover {
     padding: 0em;
     justify-content: center;
     align-items: center;
+  }
+
+  footer {
+    border-top: none !important;
+  }
+
+  footer p {
+    padding-top: 0em !important;
+    padding-bottom: 0em !important;
+    align-items: top !important;
+    margin-bottom: 1 !important;
   }
 
 }
