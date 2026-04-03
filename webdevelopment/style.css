@@ -211,10 +211,6 @@ a:hover {
     margin-top: 1.5em;
   }
 
-  #about-main {
-    margin: 1;
-  }
-
  #education, .edu {
     display: flex;
     flex-direction: row;
@@ -231,8 +227,6 @@ a:hover {
   footer p {
     padding-top: 0em !important;
     padding-bottom: 0em !important;
-    align-items: top !important;
-    margin-bottom: 1 !important;
   }
 
 }
