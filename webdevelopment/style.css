@@ -2,6 +2,9 @@ body{
   padding: 0;
   margin: 0;
   background-color: #FFFFFA;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* ⌄⌄⌄ DEFAULT STYLING ⌄⌄⌄ */
@@ -263,10 +266,30 @@ a:hover {
 
 /* ^^^ REFLECTION PAGE ^^^ */
 
+/* ⌄⌄⌄ FOOTER ⌄⌄⌄ */
 
 footer {
   display: flex;
   justify-content: center;
   padding: 0;
-  margin: 0;
+  background-color: #00421C;
+  border-top: .25em solid #BEC9F8;
+  margin-top: auto;
+}
+
+footer p {
+  font-size: .9em;
+  display: flex;
+  padding: 1em;
+  color:#FFFFFA;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  display: flex;
+  height: 2em;
+  justify-content: center;
+  align-items: center;
+  padding-right: 2.5em;
 }
