@@ -64,7 +64,7 @@ a {
   padding: .5em 3em; 
   display: flex;
   text-align: center;
-  max-width: 9em
+  max-width: 9em;
 }
 
 a:hover {
@@ -106,8 +106,8 @@ a:hover {
 }
 
 .hero a {
-  font-size: 2em;
-  max-width: 5.5em;
+  font-size: 2em !important;
+  max-width: 11.5em !important;
 }
 
 /* ^^^ HOME PAGE ^^^ */
@@ -274,6 +274,8 @@ a:hover {
 /* ⌄⌄⌄ CONTACT PAGE ⌄⌄⌄ */
 .contact {
   color: #00421C;
+  padding-top: .5em;
+  margin-bottom: .1em;
 }
 
 input {
@@ -353,7 +355,7 @@ form {
  max-width: 800px;
 }
 
-main {
+#contact-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
