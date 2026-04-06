@@ -271,6 +271,167 @@ a:hover {
 
 /* ^^^ REFLECTION PAGE ^^^ */
 
+/* ⌄⌄⌄ CONTACT PAGE ⌄⌄⌄ */
+.contact {
+  color: #00421C;
+}
+
+input {
+  font-size: .8em;
+  font-family: Nunito, Calibri, sans-serif;
+  background-color: #7D9028;
+  border: none;
+  color: #330F03;
+}
+
+textarea {
+  font-size: .8em;
+  font-family: Nunito, Calibri, sans-serif;
+  background-color: #7D9028;
+  border: none;
+  color: #330F03;
+}
+
+select {
+  font-size: .75em;
+  font-family: Nunito, Calibri, sans-serif;
+  background-color: #7D9028;
+  border: none;
+  color: #330F03;
+}
+
+::placeholder {
+  color: #330F03;
+}
+* {
+    box-sizing: border-box;
+}
+
+.top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5em;
+    margin-bottom: .25em !important;
+}
+
+.top div {
+    display: flex;
+    flex-direction: column;
+    flex: 2 1 200px;
+}
+
+.top .title {
+    flex: 0 1 80px; 
+    min-width: 80px;
+}
+
+.bottom p {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+textarea {
+    min-height: 150px; 
+    resize: vertical;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #330F03;
+}
+
+form {
+ margin: 3em;
+ max-width: 800px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#radio {
+  border: none;
+  font-family: Nunito, Calibri, sans-serif;
+}
+
+#radio legend {
+  font-weight: bold;
+  font-size: 1.1em;
+  padding-top: 1em;
+  padding-bottom: .2em;
+}
+
+#radio label {
+  font-weight: normal;
+  margin: 0;          
+  font-weight: normal; 
+  cursor: pointer;
+}
+
+#radio ul {
+   display: flex;
+   flex-wrap: wrap;    
+   gap: .75em 3em;
+   list-style: none;
+   padding: 0;
+   justify-content: center;
+   max-width: 550px;
+   margin: 0 auto;
+}
+
+#radio li {
+   flex: 1 1 45%;
+   min-width: 250px;
+   display: flex;
+   gap: 10px;  
+   align-items: center;
+   justify-content: flex-start;     
+}
+
+#radio input{
+    width: auto;
+    margin: 0;
+}
+
+.submit {
+  display: flex;
+  justify-content: center; 
+}
+.submit input{
+  background-color: #BEC9F8;
+  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  width: 200px;
+}
+
+.submit input:hover {
+  background-color: lightblue;
+}
+
+.submit input:active {
+  color: #d39d0e;
+}
+
+option {
+    background-color: white;
+    color: black;
+}
+
+
+/* ^^^ CONTACT PAGE ^^^ */
+
 /* ⌄⌄⌄ FOOTER ⌄⌄⌄ */
 
 footer {
@@ -298,3 +459,5 @@ footer img {
   align-items: center;
   padding-right: 2.5em;
 }
+
+/* ^^^ FOOTER ^^^ */
