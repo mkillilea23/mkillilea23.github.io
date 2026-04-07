@@ -16,6 +16,7 @@ h1 {
   font-weight: 700;
   display: flex;
   justify-content: center;
+  margin-top: 1em;
 }
 
 p {
@@ -32,7 +33,7 @@ h3 {
   font-weight: 700;
   display: flex;
   justify-content: center;
-  margin-top: 3em;
+  margin-top: 2em;
   margin-bottom: 1.5em;
 }
 
@@ -114,42 +115,6 @@ a:hover {
 
 /* ⌄⌄⌄ ABOUT PAGE ⌄⌄⌄ */
 
-#about-main {
-  margin: 3em;
-}
-
-#education {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1em
-}
-
-#education ul {
-  color: #330F03;
-  font-size: 1.15em;
-  font-family: Nunito, Calibri, sans-serif;
-  list-style-type: none;
-  margin: 1em;
-  text-align: center;
-  width: 25em;
-  padding: 0;
-}
-
-#education p {
-  text-align: center;
-  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-  font-weight: 500;
-  font-size: 1.5em;
-}
-
-.edu {
-  background-color: #7D9028;
-  border-radius: 2.5em;
-  padding-top: 4em;
-  padding-bottom: 4em;
-}
-
 #bio img {
   width: 500px;
   height: auto;
@@ -162,74 +127,179 @@ a:hover {
   margin: 2em;
 }
 
-#bio {
-  margin-bottom: 5em;
+#about-main a {
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
+  max-width: none;
+  width: fit-content;
+  margin: 3em 0em;
 }
 
 .video {
+  margin-top: 0em;
   background-color: #00421C;
-  padding: 3em;
+  padding: 2em;
   border-radius: 2.5em;
-  display: flex;
-  max-width: 50vw;
-  justify-content: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+#about-main {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  margin: 1em 0; 
+  gap: 1rem;
+}
+
+#bio {
+  display: grid;
+  grid-template-columns: 2fr 1fr; 
+  gap: 1.5em 6em;       
+  align-items: center;  
+  max-width: 85%;
+  margin: 0 auto 4em auto; 
+}
+
+#bio img {
+  grid-column: 2;
+  grid-row: 1 / span 5; /* Spans all paragraph rows */
+  align-self: center;    /* Keeps the image in the vertical middle of the text */
+  width: 100%; 
+  height: auto;
+  border-radius: 1.5em;
+  background-color: #330F03;
+  padding: .5em;
+  margin: 0; 
+}
+
+#bio p {
+  grid-column: 1;
+  text-align: left;
+  margin: 0.2em 0;
+}
+
+#education {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* creates 3 equal columns */
+  gap: 1.5em;
+  width: 85%;
+}
+
+.edu {
+  background-color: #7D9028;
+  border-radius: 2.5em;
+  padding: 4em 1em;
+}
+
+#education p {
+  text-align: center;
+  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+#education ul {
+  color: #330F03;
+  font-size: 1.15em;
+  font-family: Nunito, Calibri, sans-serif;
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
 }
 
 .video video {
-  width: 50vw;
+  width: 100%;
   height: auto;
-
 }
 
-@media print {
-  header, nav, a, img, .video, video {
-    display: none;
-  }
+/* PRINT */
+    @media print {
+        header, nav, a, img, .video, video {
+          display: none;
+        }
 
-  p, li, #education p {
-    font-family: Georgia;
-    font-size: 11pt;
-    color: black;
-  }
+        p, li, #education p {
+          font-family: Georgia;
+          font-size: 11pt;
+          color: black;
+        }
 
-  h1, h3 {
-    font-size: 14pt;
-    color: black;
-  }
+        h1, h3 {
+          font-size: 14pt;
+          color: black;
+        }
 
-  #about-main h1, #about-main p, #about-main h3, #education ul, #education p, .edu, .video, video, div, #bio {
-    padding: 0 0;
-    gap: 0;
-  }
+        #about-main h1, #about-main p, #about-main h3, #education ul, #education p, .edu, .video, video, div, #bio {
+          padding: 0 0;
+          gap: 0;
+        }
 
-  #bio, .edu, h1 {
-    margin: 0em;
-  }
+        #bio, .edu, h1 {
+          margin: 0em;
+        }
 
-  h3 {
-    margin-bottom: .3em;
-    margin-top: 1.5em;
-  }
+        h3 {
+          margin-bottom: .3em;
+          margin-top: 1.5em;
+        }
 
- #education, .edu {
-    display: flex;
-    flex-direction: row;
-    gap: 0em;
-    padding: 0em;
-    justify-content: center;
-    align-items: center;
-  }
+      #education, .edu {
+          display: flex;
+          flex-direction: row;
+          gap: 0em;
+          padding: 0em;
+          justify-content: center;
+          align-items: center;
+        }
 
-  footer {
-    border-top: none !important;
-  }
+        footer {
+          border-top: none !important;
+        }
 
-  footer p {
-    padding-top: 0em !important;
-    padding-bottom: 0em !important;
-  }
+        footer p {
+          padding-top: 0em !important;
+          padding-bottom: 0em !important;
+        }
+    }
+/* PRINT */
 
-}
+/* MOBILE VIEW */
+    @media screen and (max-width: 850px) {
+        #bio {
+          grid-template-columns: 1fr;
+        }
+
+        #bio img {
+          grid-column: 1;
+          width: 70%;
+          margin: 0 auto 1em auto;
+        }
+
+        #bio p {
+          grid-column: 1;
+          text-align: center;
+        }
+
+        #education {
+          grid-template-columns: 1fr; /* Switch from 3 columns to 1 */
+          width: 90%;
+          gap: 2em;
+        }
+
+        h1 {
+          font-size: 2.5em;
+        }
+
+        .video {
+          padding: 1em; 
+          width: 90%; 
+          border-radius: 1.5em;
+        }
+    }
+/* MOBILE VIEW */
+
 /* ^^^ ABOUT PAGE ^^^ */
 
 /* ⌄⌄⌄ REFLECTION PAGE ⌄⌄⌄ */
@@ -240,14 +310,27 @@ a:hover {
 
 .left {
   width: 50%;
-  margin-left: 5em;
-  margin-right: 1em;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center;     /* Vertical centering */
+}
+
+.left img {
+  width: 500px;
+  height: auto;
+  min-width: 250px;
+  max-width: 50vw;  /* responsive */
+  max-height: 70vh; /* responsive */
+  padding: .5em;
+  border-radius: 1.5em;
+  background-color: #330F03;
 }
 
 .right {
   width: 50%;
   margin-right: 5em;
   margin-left: 1em;
+  margin-bottom: 3em;
 }
 
 .right h2 {
@@ -256,7 +339,7 @@ a:hover {
 }
 
 .right {
-  text-indent: 1.5em; /* text-indent is not an allowable property for ::first-line --> https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/::first-line#:~:text=the%20right%20margin.-,Allowable%20properties,-Only%20a%20small */
+  text-indent: 1.5em;
 }
 
 .first {
@@ -268,6 +351,27 @@ a:hover {
   color:#00421C;
   font-weight: 600;
 }
+
+/* MOBILE VIEW */
+    @media screen and (max-width: 850px) {
+        #reflect {
+          flex-direction: column; /* Stacks the .left (image) on top of .right (text) */
+          align-items: center;
+          margin: 1em;
+        }
+
+        .left, .right {
+          width: 100%;
+          margin: 0 0 2em 0;      /* Removes side margins and adds space between image and text */
+        }
+
+        .left img {
+          width: 80%;
+          max-width: 400px;
+          margin: 0 auto;
+        }
+    }
+/* MOBILE VIEW */
 
 /* ^^^ REFLECTION PAGE ^^^ */
 
