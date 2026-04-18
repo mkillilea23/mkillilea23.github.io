@@ -29,21 +29,23 @@ Description: reflecting.html
 </head>
 
 <body>
-    <header>
+     <header>
        <a href="index.html"><img src="logo.png" alt="Site Logo"></a> <!-- links logo back to home page -->
 
-        <nav>
+        <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="hamburger">☰</label>
+        <nav class="mobile-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="projects.html">Projects</a>
-                    <ul class="dropdown"> 
+                     <ul class="dropdown"> 
                         <li><a href="projects.html#row1">Project 1</a></li>
                         <li><a href="projects.html#row2">Project 2</a></li>
                         <li><a href="projects.html#row3">Project 3</a></li>
                     </ul>
                 </li>    
-                <li><a href="reflection.html">Reflecting</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
