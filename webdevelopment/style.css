@@ -302,7 +302,7 @@ a:hover {
 
 /* ⌄⌄⌄ PROJECTS PAGE ⌄⌄⌄ */
 
-.row1 {
+#row1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -310,7 +310,7 @@ a:hover {
   margin: -1.5em 3em 5em 3em;
 }
 
-.row2 {
+#row2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -321,7 +321,7 @@ a:hover {
   margin: 5em 3em;
 }
 
-.row3 {
+#row3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -417,7 +417,7 @@ a:hover {
 
 /* MOBILE VIEW */
     @media screen and (max-width: 1000px) { /*changes at relatively large screen size, otherwise looks squished*/
-      .row1, .row2, .row3 {
+      #row1, #row2, #row3 {
         grid-template-columns: 1fr;
         padding: 2em;
         margin: 1em;
@@ -432,7 +432,7 @@ a:hover {
         margin: 0em; /*resets fit in green space*/
       }
 
-      .row1, .row3 {
+      #row1, #row3 {
         display: flex;
         flex-direction: column-reverse; /*presents text first, image second*/
         padding-top: 1em;
