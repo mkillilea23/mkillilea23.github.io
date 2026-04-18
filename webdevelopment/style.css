@@ -116,15 +116,18 @@ a:hover {
 /* ⌄⌄⌄ ABOUT PAGE ⌄⌄⌄ */
 
 #bio img {
-  width: 500px;
-  height: auto;
-  min-width: 250px;
-  max-width: 45vw;  /* responsive */
+  min-width: 350px;
+  max-width: 60vw;  /* responsive */
   max-height: 55vh; /* responsive */
-  padding: .5em;
+  grid-column: 2;
+  grid-row: 1 / span 5; /* Spans all paragraph rows */
+  align-self: center;    /* Keeps the image in the vertical middle of the text */
+  width: 100%; 
+  height: auto;
   border-radius: 1.5em;
   background-color: #330F03;
-  margin: 2em;
+  padding: .5em;
+  margin: 0em; 
 }
 
 #about-main a {
@@ -160,18 +163,6 @@ a:hover {
   align-items: center;  
   max-width: 85%;
   margin: 0 auto 4em auto; 
-}
-
-#bio img {
-  grid-column: 2;
-  grid-row: 1 / span 5; /* Spans all paragraph rows */
-  align-self: center;    /* Keeps the image in the vertical middle of the text */
-  width: 100%; 
-  height: auto;
-  border-radius: 1.5em;
-  background-color: #330F03;
-  padding: .5em;
-  margin: 0; 
 }
 
 #bio p {
@@ -271,12 +262,6 @@ a:hover {
           grid-template-columns: 1fr;
         }
 
-        #bio img {
-          grid-column: 1;
-          width: 70%;
-          margin: 0 auto 1em auto;
-        }
-
         #bio p {
           grid-column: 1;
           text-align: center;
@@ -298,14 +283,176 @@ a:hover {
           border-radius: 1.5em;
         }
     }
+
+    @media screen and (max-width: 1000px) { /*stacks at a larger screen size to avoid squish*/
+        #bio img {
+          grid-column: 1;
+          width: 60%;
+          margin: 0 auto 1em auto;
+        }
+
+        #bio {
+          grid-template-columns: 1fr;
+        }
+    }
+
 /* MOBILE VIEW */
 
 /* ^^^ ABOUT PAGE ^^^ */
+
+/* ⌄⌄⌄ PROJECTS PAGE ⌄⌄⌄ */
+
+.row1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 2em;
+  margin: -1.5em 3em 5em 3em;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  background-color: #7D9028;
+  border-radius: 4em;
+  padding: 4em;
+  gap: 2em;
+  margin: 5em 3em;
+}
+
+.row3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 2em;
+  margin: 6em 3em;
+}
+
+.title {
+  font-weight: 750;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.text1, .text2, .text3 {
+  text-align: center;
+}
+
+.text2 {
+  background-color: #FFFFFA;
+  border-radius: 4em;
+  padding: 2em;
+  margin-left: 1.5em; /*helps share green space better*/
+}
+
+
+.pic1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pic1 a {
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
+  max-width: none;
+  width: fit-content;
+  margin-top: 2em;
+}
+
+.pic1 img {
+  width: 600px;
+  margin: 0em !important;
+  max-width: 40vw;  /* responsive */
+  max-height: 50vh; /* responsive */
+  padding: .2em;
+  border-radius: 1em;
+  background-color: #330F03;
+}
+
+.pic2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0em !important;
+  padding: 0em !important;
+}
+
+.pic2 img {
+  width: 600px;
+  margin: 0em !important;
+  margin-right: -2em !important; /*helps share green space better*/
+  max-width: 40vw;  /* responsive */
+  max-height: 50vh; /* responsive */
+  padding: .2em;
+  border-radius: 1em;
+  background-color: #330F03;
+
+}
+
+.pic3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0em !important;
+  padding: 0em !important;
+}
+
+.pic3 img {
+  width: 600px;
+  margin: 0em !important;
+  max-width: 40vw;  /* responsive */
+  max-height: 80vh; /* responsive */
+  padding: .2em;
+  border-radius: 1em;
+  background-color: #330F03;
+
+}
+
+
+/* MOBILE VIEW */
+    @media screen and (max-width: 1000px) { /*changes at relatively large screen size, otherwise looks squished*/
+      .row1, .row2, .row3 {
+        grid-template-columns: 1fr;
+        padding: 2em;
+        margin: 1em;
+        gap: 1em
+      }
+
+      .pic1 img, .pic2 img, .pic3 img {
+        max-width: 80vw;
+      }
+
+      .text2, .pic2{
+        margin: 0em; /*resets fit in green space*/
+      }
+
+      .row1, .row3 {
+        display: flex;
+        flex-direction: column-reverse; /*presents text first, image second*/
+        padding-top: 1em;
+      }
+
+      .projects-main h1 {
+        margin-bottom:-.5em !important; /*decreases gap*/
+      }
+    }
+/* MOBILE VIEW */
+
+
+
+/* ^^^ PROJECTS PAGE ^^^ */
 
 /* ⌄⌄⌄ REFLECTION PAGE ⌄⌄⌄ */
 
 #reflect {
   display: flex;
+  gap: 1.5em;
 }
 
 .left {
@@ -319,7 +466,7 @@ a:hover {
   width: 500px;
   height: auto;
   min-width: 250px;
-  max-width: 50vw;  /* responsive */
+  max-width: 45vw;  /* responsive */
   max-height: 70vh; /* responsive */
   padding: .5em;
   border-radius: 1.5em;
@@ -353,7 +500,7 @@ a:hover {
 }
 
 /* MOBILE VIEW */
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 1000px) { /*stacks at a larger screen size to avoid squish*/
         #reflect {
           flex-direction: column; /* Stacks the .left (image) on top of .right (text) */
           align-items: center;
