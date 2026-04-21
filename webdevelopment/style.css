@@ -525,7 +525,7 @@ a:hover {
       }
 
       .table {
-        min-width: 700px; /* Forces the table to stay wide enough to scroll */
+        min-width: 770px; /* Forces the table to stay wide enough to scroll */
         max-width: none;
       }
 
