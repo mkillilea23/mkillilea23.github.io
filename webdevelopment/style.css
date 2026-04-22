@@ -47,11 +47,14 @@ h2 {
 }
 
 blockquote {
-  font-size: 1.7em;
+  font-size: 2.5em;
   font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-weight: 700;
   display: flex;
   justify-content: center;
+  color:#FFFFFA;
+  margin-bottom: 0em;
+  text-align: center;
 }
 
 a {
@@ -78,14 +81,14 @@ a:hover {
 
 #herosection {
   width: auto;
-  height: 85vh;
-  background: url(hero.jpg) no-repeat center/cover;
+  height: 80vh;
+  background: url(hero.jpg) no-repeat top/cover;
 }
 
 .hero {
   width: 90%;
   height: 90%;
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -111,6 +114,57 @@ a:hover {
   max-width: 11.5em !important;
 }
 
+.intro {
+  display: flex;
+  flex-direction: column;
+  margin: 4em;
+  justify-content: center;
+  border: 3pt solid #330F03;
+  border-radius: 4em;
+  padding: 3em;
+}
+
+.intro h3 {
+  margin-top: 0em;
+  margin-bottom: .75em;
+}
+
+.intro p {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  background-color: #7D9028;
+  padding: 3em .5em;
+  margin-bottom: 1.5em;
+}
+
+.quote p {
+  justify-content: center;
+  text-align: center;
+  font-size: 1.75em;
+  margin-top: .5em;
+}
+
+    @media (max-width: 850px) {
+      #herosection {
+        background-position: 80% top; 
+      }
+
+      .hero { /*align to  center*/
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero p {
+        max-width: 100%;
+        text-align: center;
+      }
+    }
+    
 /* ^^^ HOME PAGE ^^^ */
 
 /* ⌄⌄⌄ ABOUT PAGE ⌄⌄⌄ */
@@ -419,7 +473,6 @@ a:hover {
   padding: .2em;
   border-radius: 1em;
   background-color: #330F03;
-
 }
 
 #table {
@@ -800,6 +853,13 @@ footer img {
   justify-content: center;
   align-items: center;
   padding-right: 2.5em;
+  transition: transform 0.3s linear;
 }
 
+footer .email {
+  transform-origin: left center;
+}
+footer img:hover {
+  transform: scale(1.5);
+}
 /* ^^^ FOOTER ^^^ */
