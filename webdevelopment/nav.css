@@ -7,6 +7,7 @@ header {
     border-bottom: .25em solid lightblue;
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 header a {
