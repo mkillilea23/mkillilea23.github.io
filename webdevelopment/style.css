@@ -123,6 +123,7 @@ a:active {
   height: 7px;
   background: lightblue; 
   border-radius: 50%;
+  z-index: 1;
   
   /* --- ANIMATION PROPERTIES --- */
     opacity: 0; /* Starts invisible */
