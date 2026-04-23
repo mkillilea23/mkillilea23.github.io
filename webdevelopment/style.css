@@ -12,25 +12,25 @@ body{
 h1 {
   color: #7D9028;
   font-size: 3.25em;
-  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-  font-weight: 700;
+  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif; /* Custom font from Google Fonts applied to site */
+  font-weight: 750;
   display: flex;
   justify-content: center;
   margin: 1.25em 0em;
 }
 
 p {
-  color: #330F03;
+  color: #250900;
   font-size: 1.15em;
-  font-family: Nunito, Calibri, sans-serif;
+  font-family: Nunito, Calibri, sans-serif; /* Custom font from Google Fonts applied to site */
   text-align: justify;
 }
 
 h3 {
   color: #00421C;
   font-size: 2.5em;
-  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-  font-weight: 700;
+  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif; /* Custom font from Google Fonts applied to site */
+  font-weight: 750;
   display: flex;
   justify-content: center;
   margin-top: 2em;
@@ -40,15 +40,15 @@ h3 {
 h2 {
   color: #00421C;
   font-size: 1.75em;
-  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-  font-weight: 700;
+  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif; /* Custom font from Google Fonts applied to site */
+  font-weight: 750;
   display: flex;
   justify-content: center;
 }
 
 blockquote {
   font-size: 2.5em;
-  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif; /* Custom font from Google Fonts applied to site */
   font-weight: 700;
   display: flex;
   justify-content: center;
@@ -58,10 +58,11 @@ blockquote {
 }
 
 a {
-  color: #330F03;
+  color: #250900;
   font-size: 1.15em;
-  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-  background-color: #BEC9F8;
+  font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif; /* Custom font from Google Fonts applied to site */
+  font-weight: 700;
+  background-color: lightblue;
   border-radius: 60em;
   border: none;
   text-decoration: none;
@@ -69,10 +70,15 @@ a {
   display: flex;
   text-align: center;
   max-width: 9em;
+  justify-content: center;
 }
 
 a:hover {
-  background-color: lightblue; /*changes button to light blue on hover*/
+  background-color: #d39d0e; /*changes button to light blue on hover*/
+}
+
+a:active {
+    background-color: palevioletred
 }
 
 /* ^^^ DEFAULT STYLING ^^^ */
@@ -95,11 +101,46 @@ a:hover {
   justify-content: center;
 }
 
+/* Custom styles for all <h1> elements */
 .hero h1 {
   margin-bottom: .3em;
   font-size: 5em;
   justify-content: left;
-} /*want to add curved underline/swoosh -- still figuring this out*/
+  text-shadow: 0 0 7pt #250900; /*primarily used for mobile view to make it more legible over the picture*/
+}
+
+.hero h1 {
+    position: relative;
+    display: inline-block;
+}
+
+.hero h1::after {
+  content: "";
+  position: absolute;
+  left: -3%;
+  bottom: -6px;
+  width: 6.5em;
+  height: 7px;
+  background: lightblue; 
+  border-radius: 50%;
+  
+  /* --- ANIMATION PROPERTIES --- */
+    opacity: 0; /* Starts invisible */
+    animation: swooshIn 1.75s ease-out forwards;
+    animation-delay: 0.5s; /* Wait a moment so the text is seen first */
+}
+
+      /* The Animation Instructions */
+      @keyframes swooshIn {
+          0% {
+              opacity: 0;
+              transform: translateX(-60px) rotate(0deg); /* Start 20px to the left */
+          }
+          100% {
+              opacity: 1;
+              transform: translateX(0) rotate(0deg); /* End in its original spot */
+          }
+      }
 
 .hero p {
   color: #FFFFFA;
@@ -107,11 +148,12 @@ a:hover {
   font-size: 1.75em;
   max-width: 80%;
   text-align: left;
+  text-shadow: 0 0 7pt #250900; /*used for mobile view to make it more legible over the picture*/
 }
 
 .hero a {
   font-size: 2em !important;
-  max-width: 11.5em !important;
+  max-width: 12em !important;
 }
 
 .intro {
@@ -119,14 +161,17 @@ a:hover {
   flex-direction: column;
   margin: 4em;
   justify-content: center;
-  border: 3pt solid #330F03;
+  border: 3pt solid #250900;
   border-radius: 4em;
   padding: 3em;
 }
 
-.intro h3 {
+/* Custom styles for all <h2> elements */
+.intro h2 {
   margin-top: 0em;
   margin-bottom: .75em;
+  font-size: 2.5em;
+  text-decoration: underline #d39d0e;
 }
 
 .intro p {
@@ -179,7 +224,7 @@ a:hover {
   width: 100%; 
   height: auto;
   border-radius: 1.5em;
-  background-color: #330F03;
+  background-color: #250900;
   padding: .5em;
   margin: 0em; 
 }
@@ -193,10 +238,43 @@ a:hover {
   margin: 4em 0em;
 }
 
+#about-main h1 {
+    position: relative;
+    display: inline-block;
+}
+
+#about-main h1::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  bottom: -6px;
+  width: 9em;
+  height: 7px;
+  background: lightblue; 
+  border-radius: 50%;
+  
+  /* --- ANIMATION PROPERTIES --- */
+    opacity: 0; /* Starts invisible */
+    animation: swooshIn 1.75s ease-out forwards;
+    animation-delay: 0.5s; /* Wait a moment so the text is seen first */
+}
+
+      /* The Animation Instructions */
+      @keyframes swooshIn {
+          0% {
+              opacity: 0;
+              transform: translateX(-60px) rotate(0deg); /* Start 20px to the left */
+          }
+          100% {
+              opacity: 1;
+              transform: translateX(0) rotate(0deg); /* End in its original spot */
+          }
+      }
+
 .video {
   display: flex;
   margin-top: 0em;
-  background-color: #00421C;
+  background-color: #002b12;
   padding: 4em;
   width: 100%;
   justify-content: center;
@@ -205,7 +283,7 @@ a:hover {
 .video video {
   height: auto;
   max-width: 850px;
-  border: 4pt solid #330F03
+  border: 4pt solid #250900
 }
 
 #about-main {
@@ -252,19 +330,18 @@ a:hover {
   text-align: center;
   font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.6em;
+  color: #002b12
 }
 
 #education ul {
-  color: #330F03;
+  color: #250900;
   font-size: 1.15em;
   font-family: Nunito, Calibri, sans-serif;
   list-style-type: none;
   text-align: center;
   padding: 0;
 }
-
-
 
 /* PRINT */
     @media print {
@@ -365,6 +442,37 @@ a:hover {
 
 /* ⌄⌄⌄ PROJECTS PAGE ⌄⌄⌄ */
 
+.projects-main h1 {
+  position: relative;
+}
+
+.projects-main h1::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  width: 9em;
+  height: 7px;
+  background: lightblue; 
+  border-radius: 50%;
+  
+  /* --- ANIMATION PROPERTIES --- */
+    opacity: 0; /* Starts invisible */
+    animation: swooshIn 1.75s ease-out forwards;
+    animation-delay: 0.5s; /* Wait a moment so the text is seen first */
+}
+
+      /* The Animation Instructions */
+      @keyframes swooshIn {
+          0% {
+              opacity: 0;
+              transform: translateX(-60px) rotate(0deg); /* Start 20px to the left */
+          }
+          100% {
+              opacity: 1;
+              transform: translateX(0) rotate(0deg); /* End in its original spot */
+          }
+      }
+
 #row1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -375,12 +483,13 @@ a:hover {
 
 #row2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 55% 1fr;
   grid-template-rows: auto;
   background-color: #7D9028;
   width: 100%;
   padding: 4em;
   gap: 2em;
+  justify-content: center;
 }
 
 #row3 {
@@ -401,13 +510,17 @@ a:hover {
   text-align: center;
 }
 
+
+.text1 h2, .text2 h2, .text3 h2 {
+  text-decoration: underline #d39d0e;
+} 
+
 .text2 {
   background-color: #FFFFFA;
   border-radius: 4em;
   padding: 2em;
-  margin-left: 1.5em; /*helps share green space better*/
+  margin-left: 1em; /*helps share green space better*/
 }
-
 
 .pic1 {
   display: flex;
@@ -417,7 +530,7 @@ a:hover {
 }
 
 .pic1 a {
-  display: inline-flex; 
+  display: flex; 
   justify-content: center;
   align-items: center;
   max-width: none;
@@ -432,7 +545,7 @@ a:hover {
   max-height: 50vh; /* responsive */
   padding: .2em;
   border-radius: 1em;
-  background-color: #330F03;
+  background-color: #250900;
 }
 
 .pic2 {
@@ -452,8 +565,7 @@ a:hover {
   max-height: 50vh; /* responsive */
   padding: .2em;
   border-radius: 1em;
-  background-color: #330F03;
-
+  background-color: #250900;
 }
 
 .pic3 {
@@ -472,7 +584,7 @@ a:hover {
   max-height: 80vh; /* responsive */
   padding: .2em;
   border-radius: 1em;
-  background-color: #330F03;
+  background-color: #250900;
 }
 
 #table {
@@ -485,10 +597,10 @@ a:hover {
   color: #00421C;
   font-size: 1.75em;
   font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-  font-weight: 700;
+  font-weight: 750;
   margin: 1em;
   text-decoration: underline;
-  text-decoration-color: #BEC9F8;
+  text-decoration-color: #d39d0e;
 }
 
 .table {
@@ -499,15 +611,14 @@ a:hover {
 }
 
 .table th {
- color: #330F03;
-  font-size: 1.1em;
+ color: #250900;
+  font-size: 1.2em;
   font-family: Nunito, Calibri, sans-serif;
-  font-weight: bold;
+  font-weight: 750;
 }
 
 .table th[scope="row"] {
   font-size: 1em;
-  text-align: left;
 }
 
 .table th[scope="col"] {
@@ -515,9 +626,10 @@ a:hover {
 }
 
 .table td {
-  color: #330F03;
+  color: #250900;
   font-size: .95em;
   font-family: Nunito, Calibri, sans-serif;
+  text-align: center;
 }
 
 .table th, .table td {
@@ -546,16 +658,11 @@ a:hover {
       #row2 {
         grid-template-columns: 1fr;
         padding: 2em;
-        margin: 1em;
         gap: 3em;
       }
 
       .pic1 img, .pic2 img, .pic3 img {
         max-width: 80vw;
-      }
-
-      .text2, .pic2{
-        margin: 0em; /*resets fit in green space*/
       }
 
       #row1, #row3 {
@@ -565,7 +672,7 @@ a:hover {
       }
 
       .projects-main h1 {
-        margin-bottom:-.5em !important; /*decreases gap*/
+        margin-bottom: -.2em !important; /*decreases gap*/
       }
     }
  
@@ -592,6 +699,37 @@ a:hover {
 
 /* ⌄⌄⌄ REFLECTION PAGE ⌄⌄⌄ */
 
+.reflect {
+  position: relative;
+}
+
+.reflect::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  width: 6em;
+  height: 7px;
+  background: lightblue; 
+  border-radius: 50%;
+  
+  /* --- ANIMATION PROPERTIES --- */
+    opacity: 0; /* Starts invisible */
+    animation: swooshIn 1.75s ease-out forwards;
+    animation-delay: 0.5s; /* Wait a moment so the text is seen first */
+}
+
+      /* The Animation Instructions */
+      @keyframes swooshIn {
+          0% {
+              opacity: 0;
+              transform: translateX(-60px) rotate(0deg); /* Start 20px to the left */
+          }
+          100% {
+              opacity: 1;
+              transform: translateX(0) rotate(0deg); /* End in its original spot */
+          }
+      }
+
 #reflect {
   display: flex;
   gap: 1.5em;
@@ -612,11 +750,11 @@ a:hover {
   max-height: 70vh; /* responsive */
   padding: .5em;
   border-radius: 1.5em;
-  background-color: #330F03;
+  background-color: #250900;
 }
 
 .right {
-  width: 50%;
+  width: 60%;
   margin-right: 5em;
   margin-left: 1em;
   margin-bottom: 3em;
@@ -654,6 +792,9 @@ a:hover {
           margin: 0 0 2em 0;      /* Removes side margins and adds space between image and text */
         }
 
+        .right {
+          padding: 0em 3em;
+        }
         .left img {
           width: 80%;
           max-width: 400px;
@@ -665,6 +806,38 @@ a:hover {
 /* ^^^ REFLECTION PAGE ^^^ */
 
 /* ⌄⌄⌄ CONTACT PAGE ⌄⌄⌄ */
+
+#contact-main h1 {
+  position: relative;
+}
+
+#contact-main h1::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  width: 7em;
+  height: 7px;
+  background: lightblue; 
+  border-radius: 50%;
+  
+  /* --- ANIMATION PROPERTIES --- */
+    opacity: 0; /* Starts invisible */
+    animation: swooshIn 1.75s ease-out forwards;
+    animation-delay: 0.5s; /* Wait a moment so the text is seen first */
+}
+
+      /* The Animation Instructions */
+      @keyframes swooshIn {
+          0% {
+              opacity: 0;
+              transform: translateX(-60px) rotate(0deg); /* Start 20px to the left */
+          }
+          100% {
+              opacity: 1;
+              transform: translateX(0) rotate(0deg); /* End in its original spot */
+          }
+      }
+
 .contact {
   color: #00421C;
   padding-top: .5em;
@@ -676,7 +849,7 @@ input {
   font-family: Nunito, Calibri, sans-serif;
   background-color: #7D9028;
   border: none;
-  color: #330F03;
+  color: #250900;
 }
 
 textarea {
@@ -684,7 +857,7 @@ textarea {
   font-family: Nunito, Calibri, sans-serif;
   background-color: #7D9028;
   border: none;
-  color: #330F03;
+  color: #250900;
 }
 
 select {
@@ -692,11 +865,11 @@ select {
   font-family: Nunito, Calibri, sans-serif;
   background-color: #7D9028;
   border: none;
-  color: #330F03;
+  color: #250900;
 }
 
 ::placeholder {
-  color: #330F03;
+  color: #250900;
 }
 * {
     box-sizing: border-box;
@@ -740,7 +913,7 @@ textarea {
 label {
     font-weight: bold;
     margin-bottom: 5px;
-    color: #330F03;
+    color: #250900;
 }
 
 form {
@@ -804,19 +977,20 @@ form {
   justify-content: center; 
 }
 .submit input{
-  background-color: #BEC9F8;
+  background-color: lightblue;
   font-family: Sansita, 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   font-size: 1em;
   font-weight: bold;
   width: 200px;
+  border-radius: 4em;
 }
 
 .submit input:hover {
-  background-color: lightblue;
+  background-color: #d39d0e;
 }
 
 .submit input:active {
-  color: #d39d0e;
+  background-color: palevioletred;
 }
 
 option {
@@ -833,8 +1007,8 @@ footer {
   display: flex;
   justify-content: center;
   padding: 0;
-  background-color: #00421C;
-  border-top: .25em solid #BEC9F8;
+  background-color: #002b12;
+  border-top: .25em solid lightblue;
   margin-top: auto;
 }
 
