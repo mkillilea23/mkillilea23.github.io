@@ -413,7 +413,7 @@ a:active {
 /* PRINT */
 
 /* MOBILE VIEW */
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 850px) {
         #bio {
           grid-template-columns: 1fr;
         }
@@ -439,7 +439,18 @@ a:active {
         h1 {
           font-size: 2.5em;
         }
-    }
+
+        
+  
+  /* Force the main container to strictly respect the screen width */
+  #about-main, #bio, #education {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Cut off any tiny "ghost" overflows */
+  }
+}
+    
 
     @media screen and (max-width: 1000px) { /*stacks at a larger screen size to avoid squish*/
         #bio img {
@@ -463,7 +474,7 @@ a:active {
         }
     }
 
-    * { outline: 1px solid purple !important; }
+    * { outline: 1px solid orange !important; }
 /* MOBILE VIEW */
 
 /* ^^^ ABOUT PAGE ^^^ */
