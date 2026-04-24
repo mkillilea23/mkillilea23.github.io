@@ -420,65 +420,71 @@ a:active {
 /* PRINT */
 
 /* MOBILE VIEW */
-    @media screen and (max-width: 850px) {
-        #bio {
-          grid-template-columns: 1fr;
-          gap: 1em 0em;
-        }
+    /* --- MOBILE VIEW --- */
 
-        #bio p {
-          grid-column: 1;
-          text-align: center;
-        }
-
-        #education {
-          grid-template-columns: 1fr; /* Switch from 3 columns to 1 */
-          width: 90vw;
-          gap: 2em;
-        }
-
-        .edu {
-          padding: 1em;
-        }
-
-        #education p {
-          overflow-wrap: break-word;
-        }
-
-        h1 {
-          font-size: 2.5em;
-        }
-    
-         #about-main h1::after {
-          width: 100% !important;
-          left: 0 !important;
-          max-width: 100%;
-        }
-
-    @media screen and (max-width: 1000px) { /*stacks at a larger screen size to avoid squish*/
-        #bio img {
-          grid-column: 1;
-          width: 60vw;
-          margin: 0 auto 1em auto;
-          min-width: 0;
-          grid-column: 1;
-          grid-row: auto !important; 
-        }
-
-        #bio {
-          grid-template-columns: 1fr;
-        }
-
-        .video video {
-          max-width: 85vw;  
-        }
-
-        .video {
-          padding: 2em 0em;
-        }
-    }
+/* 1. First, handle tablet/large phone sizes */
+@media screen and (max-width: 1000px) {
+  #bio {
+    grid-template-columns: 1fr;
+    max-width: 90vw;
   }
-    * { outline: 1px solid darkgreen !important; }
+
+  #bio img {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    width: 60vw;
+    min-width: 0 !important; /* CRITICAL: Kills the 350px pop */
+    margin: 0 auto 1.5em auto;
+  }
+
+  .video video {
+    max-width: 85vw;
+  }
+
+  .video {
+    padding: 2em 0em;
+  }
+}
+
+/* 2. Then, handle smaller phones like iPhone 16 */
+@media screen and (max-width: 850px) {
+  #bio p {
+    text-align: center;
+  }
+
+  #education {
+    grid-template-columns: 1fr;
+    width: 90vw;
+    gap: 2em;
+  }
+
+  .edu {
+    padding: 2em 1em; /* Reduced from 4em */
+  }
+
+  #education p {
+    overflow-wrap: break-word;
+    font-size: 1.4em; /* Slightly smaller to prevent overflow */
+  }
+
+  h1 {
+    font-size: 2.2em; /* Ensure header fits width */
+  }
+
+  #about-main h1::after {
+    width: 100% !important;
+    left: 0 !important;
+    max-width: 100%;
+  }
+  
+  /* Final safety net for Safari */
+  #about-main {
+      overflow-x: hidden;
+      width: 100%;
+  }
+}
+
+    * { outline: 1px solid mediumvioletred !important; }
 /* MOBILE VIEW */
 
 /* ^^^ ABOUT PAGE ^^^ */
