@@ -173,6 +173,7 @@ a:active {
   margin-bottom: .75em;
   font-size: 2.5em;
   text-decoration: underline #d39d0e;
+  text-align: center;
 }
 
 .intro p {
@@ -208,6 +209,22 @@ a:active {
       .hero p {
         max-width: 100%;
         text-align: center;
+      }
+
+      .hero h1::after {
+       background: none;
+      }
+
+      .hero h1 {
+        font-size: 4em;
+      }
+
+      .hero a {
+        font-size: 1.5em !important;
+      }
+
+      .intro {
+        margin: 1em;
       }
     }
     
@@ -408,7 +425,7 @@ a:active {
 
         #education {
           grid-template-columns: 1fr; /* Switch from 3 columns to 1 */
-          width: 90%;
+          width: 90vw;
           gap: 2em;
         }
 
@@ -420,8 +437,10 @@ a:active {
     @media screen and (max-width: 1000px) { /*stacks at a larger screen size to avoid squish*/
         #bio img {
           grid-column: 1;
-          width: 60%;
+          width: 60vw;
           margin: 0 auto 1em auto;
+          min-width: 0;
+          grid-column: 1;
         }
 
         #bio {
@@ -688,12 +707,26 @@ a:active {
       .table {
         min-width: 770px; /* Forces the table to stay wide enough to scroll */
         max-width: none;
+        -webkit-overflow-scrolling: touch; /* Ensures smooth momentum scrolling on iOS */
+}
+
+      /* 1. Define the bar's height (horizontal) */
+      .table::-webkit-scrollbar {
+        height: 8px; /* Make it thick enough to see */
+      }
+
+      /* 3. Style the thumb (the part that moves) */
+      .table::-webkit-scrollbar-thumb {
+        background: #888; /* Darker gray for contrast */
+        border-radius: 10px;
+        border: 2px solid #f1f1f1; /* Creates a "gap" effect */
+      }
       }
 
       .table th, .table td {
       padding: .5em;
       }
-    }
+    
 /* MOBILE VIEW */
 
 /* ^^^ PROJECTS PAGE ^^^ */
@@ -788,13 +821,19 @@ a:active {
           margin: 1em;
         }
 
-        .left, .right {
+        .left {
           width: 100%;
           margin: 0 0 2em 0;      /* Removes side margins and adds space between image and text */
         }
 
         .right {
-          padding: 0em 3em;
+          padding: 0em 1em;
+          width: 100%;
+          margin: 0 0 2em 0;
+        }
+
+        .right p {
+          text-align: center;
         }
         .left img {
           width: 80%;
@@ -1025,6 +1064,7 @@ footer p {
 a[href^="tel"] {
   color: inherit; /* Inherits the color of the surrounding text */
   text-decoration: none; /* Removes the underline */
+  background-color: none;
 }
 
 footer img {
