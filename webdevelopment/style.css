@@ -223,7 +223,7 @@ a:active {
       }
 
       .hero h1 {
-        font-size: 3.9em;
+        font-size: 14vw;
       }
 
       .hero a {
@@ -419,72 +419,68 @@ a:active {
       }
 /* PRINT */
 
-/* MOBILE VIEW */
-    /* --- MOBILE VIEW --- */
+/* MOBILE VIEW */     
+        @media screen and (max-width: 1000px) {
+          #bio {
+            grid-template-columns: 1fr;
+            max-width: 90vw;
+          }
 
-/* 1. First, handle tablet/large phone sizes */
-@media screen and (max-width: 1000px) {
-  #bio {
-    grid-template-columns: 1fr;
-    max-width: 90vw;
-  }
+          #bio img {
+            grid-column: 1 !important;
+            grid-row: auto !important;
+            width: 60vw;
+            min-width: 0 !important;
+            margin: 0 auto 1.5em auto;
+          }
 
-  #bio img {
-    grid-column: 1 !important;
-    grid-row: auto !important;
-    width: 60vw;
-    min-width: 0 !important; /* CRITICAL: Kills the 350px pop */
-    margin: 0 auto 1.5em auto;
-  }
+          .video video {
+            max-width: 85vw;
+          }
 
-  .video video {
-    max-width: 85vw;
-  }
+          .video {
+            padding: 2em 0em;
+          }
+        }
 
-  .video {
-    padding: 2em 0em;
-  }
-}
+        
+        @media screen and (max-width: 850px) {
+          #bio p {
+            text-align: center;
+          }
 
-/* 2. Then, handle smaller phones like iPhone 16 */
-@media screen and (max-width: 850px) {
-  #bio p {
-    text-align: center;
-  }
+          #education {
+            grid-template-columns: 1fr;
+            width: 90vw;
+            gap: 2em;
+          }
 
-  #education {
-    grid-template-columns: 1fr;
-    width: 90vw;
-    gap: 2em;
-  }
+          .edu {
+            padding: 2em 1em;
+          }
 
-  .edu {
-    padding: 2em 1em; /* Reduced from 4em */
-  }
+          #education p {
+            overflow-wrap: break-word;
+            font-size: 1.4em;
+          }
 
-  #education p {
-    overflow-wrap: break-word;
-    font-size: 1.4em; /* Slightly smaller to prevent overflow */
-  }
+          h1 {
+            font-size: 2.2em;
+          }
 
-  h1 {
-    font-size: 2.2em; /* Ensure header fits width */
-  }
+          #about-main h1::after {
+            width: 100% !important;
+            left: 0 !important;
+            max-width: 100%;
+          }
+          
+          #about-main {
+              overflow-x: hidden;
+              width: 100%;
+          }
+        }
 
-  #about-main h1::after {
-    width: 100% !important;
-    left: 0 !important;
-    max-width: 100%;
-  }
   
-  /* Final safety net for Safari */
-  #about-main {
-      overflow-x: hidden;
-      width: 100%;
-  }
-}
-
-    * { outline: 1px solid mediumvioletred !important; }
 /* MOBILE VIEW */
 
 /* ^^^ ABOUT PAGE ^^^ */
