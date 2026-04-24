@@ -216,11 +216,11 @@ a:active {
       }
 
       .hero h1 {
-        font-size: 4em;
+        font-size: 3.9em;
       }
 
       .hero a {
-        font-size: 1.5em !important;
+        padding: .5em 2.5em;
       }
 
       .intro {
@@ -441,14 +441,17 @@ a:active {
         }
 
         
-  
-  /* Force the main container to strictly respect the screen width */
-  #about-main, #bio, #education {
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box;
-    overflow-x: hidden; /* Cut off any tiny "ghost" overflows */
-  }
+  #about-main {
+    overflow-x: hidden; /* This kills any "ghost" widths from animations */
+    width: 100vw;       /* Explicitly tells Safari the width is the screen width */
+    max-width: 100%;
+}
+
+@media screen and (max-width: 850px) {
+    #about-main h1::after {
+        width: 100%;    /* Instead of 9em, make it relative to the header text */
+        left: 0;        /* Keep it contained */
+    }
 }
     
 
@@ -474,7 +477,7 @@ a:active {
         }
     }
 
-    * { outline: 1px solid orange !important; }
+    * { outline: 1px solid greenyellow !important; }
 /* MOBILE VIEW */
 
 /* ^^^ ABOUT PAGE ^^^ */
