@@ -466,7 +466,7 @@ a:active {
         }
     }
 
-
+    * { outline: 1px solid red !important; }
 /* MOBILE VIEW */
 
 /* ^^^ ABOUT PAGE ^^^ */
