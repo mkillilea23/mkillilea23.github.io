@@ -1022,6 +1022,11 @@ footer p {
   align-items: center;
 }
 
+a[href^="tel"] {
+  color: inherit; /* Inherits the color of the surrounding text */
+  text-decoration: none; /* Removes the underline */
+}
+
 footer img {
   display: flex;
   height: 2em;
