@@ -413,7 +413,7 @@ a:active {
 /* PRINT */
 
 /* MOBILE VIEW */
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 1000px) {
         #bio {
           grid-template-columns: 1fr;
         }
@@ -429,9 +429,6 @@ a:active {
           gap: 2em;
         }
 
-        .video {
-          padding: 1em;
-        }
         .edu {
           padding: 1em;
         }
@@ -462,7 +459,7 @@ a:active {
         }
 
         .video {
-          padding: 4em 0em;
+          padding: 2em 0em;
         }
     }
 
