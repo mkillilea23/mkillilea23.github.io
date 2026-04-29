@@ -1094,7 +1094,6 @@ footer img:hover {
 .copyright {
   display: flex;
   flex-direction: column;
-  
   margin-left: 5em;
 }
 
@@ -1106,7 +1105,7 @@ footer img:hover {
   a[href^="tel"] {
     color: inherit; /* Inherit the color of the parent text */
     text-decoration: none; /* Remove the underline */
-    background-color: none;
+    background-color: #002b12;
   }
 }
 /* ^^^ FOOTER ^^^ */
