@@ -1091,6 +1091,13 @@ footer img:hover {
   transform: scale(1.5);
 }
 
+.copyright {
+  display: flex;
+  flex-direction: column;
+  
+  margin-left: 5em;
+}
+
 @media screen and (max-width: 1000px) {
   footer img {
     display: none;
