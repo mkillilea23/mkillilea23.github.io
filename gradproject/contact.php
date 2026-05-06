@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+Name: Molly Killilea
+Date: 4/5/2026
+Course: ISLT 7355 - Web Dev
+Description: Contact Page
+-->
+
+<head>
+   <meta charset="utf-8"> <!-- character encoding -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- mobile-friendly layout -->
+
+   <title>Contact</title> <!-- webapge title in browser tab -->
+
+   <link rel="stylesheet" href="style.css"> <!-- link to external CSS for styling -->
+   <link rel="stylesheet" href="nav.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- links for fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+   <?php include 'header.php'; ?>
+
+    <main>
+    
+    <section id="contact-main">
+    <h1 class="contact">Let's Connect</h1>
+
+    <form action="https://formspree.io/f/mqegwepz" method="post"> <!-- found this website that allows form to send directly from Contact Page without opening the user's default email app, and shows "Thank you" response to user -->
+        
+        <section class="top">
+            <div class="contact-title">
+                <p>
+                    <label for="form-title">Title:</label>
+                    <select name="title" id="form-title">
+                        <option>---</option>
+                        <option>Mr.</option>
+                        <option>Mrs.</option>
+                        <option>Ms.</option>
+                        <option>Miss</option>
+                        <option>Dr.</option>
+                    </select>
+                </p>
+            </div>  
+
+            <div class="name">
+                <p>
+                    <label for="form-name">Name:</label>
+                    <input type="text" name="name" id="form-name" required autofocus placeholder="First and Last Name">
+                </p>
+            </div>  
+            
+            <div class="email">
+                <p>
+                    <label for="form-email">Email:</label>
+                    <input type="email" name="email" id="form-email" required placeholder="your-name@email.com">
+                </p>
+            </div>
+        </section>
+
+        <section class="bottom">
+            <p>
+                <label for="form-message">Message:</label>
+                <textarea name="message" id="form-message" required placeholder="Type your message..."></textarea>
+            </p>
+        </section>
+
+        <fieldset id="radio">
+            <legend>What can I help you with?</legend>
+            <ul style="list-style: none; padding: 0;">
+                <li>
+                    <input type="radio" name="need" id="need-general" value="general" required>
+                    <label for="need-general">General inquiry</label>
+                </li>
+               
+                <li>
+                    <input type="radio" name="need" id="need-fulltime" value="full-time">
+                    <label for="need-fulltime">Full-time opportunity</label>
+                </li>
+                
+                <li>
+                    <input type="radio" name="need" id="need-collab" value="collab">
+                    <label for="need-collab">Collaboration opportunity</label>
+                </li>
+                
+                <li>
+                    <input type="radio" name="need" id="need-freelance" value="freelance">
+                    <label for="need-freelance">Freelance/contract work</label>
+                </li>
+                
+                <li>
+                    <input type="radio" name="need" id="need-feedback" value="feedback">
+                    <label for="need-feedback">Feedback on my work</label>
+                </li>
+
+                 <li>
+                    <input type="radio" name="need" id="need-other" value="other">
+                    <label for="need-other">Other</label>
+                </li>
+            </ul>
+        </fieldset>
+
+        <div class="submit">
+            <p><input type="submit" value="Submit"></p>
+        </div>
+    
+    </form>
+    </section>
+</main>
+
+    <?php include 'footer.php'; ?>
+    
+    
+</body>
+
+</html>

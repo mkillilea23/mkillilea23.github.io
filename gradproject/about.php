@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+Name: Molly Killilea
+Date: 3/14/2026
+Course: ISLT 7355 - Web Dev
+Description: about.html
+-->
+
+<head>
+   <meta charset="utf-8"> <!-- character encoding -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- mobile-friendly layout -->
+
+   <title>About Me</title> <!-- webapge title in browser tab -->
+
+   <link rel="stylesheet" href="style.css"> <!-- link to external CSS for styling -->
+   <link rel="stylesheet" href="nav.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- links for fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+</head>
+
+<body>
+    <?php include 'header.php'; ?>
+
+    <main> 
+        <section id="about-main">
+            <h1>More About Me...</h1>
+            
+            <div id="bio">
+                <img src="media/headshot.jpg" alt="Headshot of Molly Killilea">
+
+                <p>I’m currently a graduate student at the University of Missouri, pursuing my Master of Science in Learning Technologies and Design. 
+                    I hope to graduate in Spring 2027 and establish a career as an instructional designer!</p>
+                <p>I originally went to school for speech pathology, graduating from Kansas State University with my Bachelor of Science degree in Fall 2021. 
+                    After completing half of a master's degree in speech language pathology, however, I realized it wasn't quite the right fit for me. </p>
+                <p>I then found my way into higher education, and I now work full-time as an academic advisor 
+                    for undergraduate students at the University of Missouri-Kansas City. I thoroughly enjoy being a guide for students 
+                    and encouraging them in their academic and career goals.</p>
+                <p>Through these experiences, I have discovered that I have a desire to create meaningful, engaging, and 
+                    accessible learning experiences for others, which is what led me to my current educational pursuit. </p>
+                <p>In my free time I really enjoy reading, crafting, and most of all, traveling (I've been to 21 countries so far!). 
+                    Throughout this program, I hope to leverage my creative side with my passion for supporting others 
+                    as I prepare to enter the field of instructional design.</p>
+            </div>   
+                
+            <div class="video">
+                <video controls> <source src="media/KillileaResumeVideo.mp4" type="video/mp4"> 
+                    Your browser does not support the video tag. 
+                </video>
+            </div>
+        
+            <h3>Education</h3>
+
+            <div id="education">
+                
+                <div class="edu">
+                <p><strong>University of Missouri</strong></p>
+                    <ul>
+                        <li>August 2025 - Present</li>
+                        <li><em>Columbia, MO</em></li>
+                        <li>---</li>
+                        <li>Master of Science in<br>Learning Technologies and Design</li>
+                        <li>---</li>
+                        <li>Anticipated Graduation: May 2027</li>
+                    </ul>
+                </div>
+
+                <div class="edu">
+                <p><strong>Saint Mary's College</strong></p>
+                    <ul>
+                        <li>August 2022 - May 2023</li>
+                        <li><em>Notre Dame, IN</em></li>
+                        <li>---</li>
+                        <li>Master of Science in<br>Speech Language Pathology</li>
+                        <li>---</li>
+                        <li>Completed 33 graduate credits</li>
+                    </ul>
+                </div>
+
+                <div class="edu">
+                <p><strong>Kansas State University</strong></p>
+                    <ul>
+                        <li>August 2018 - December 2021</li>
+                        <li><em>Manhattan, KS</em></li>
+                        <li>---</li>
+                        <li>Bachelor of Science in<br>Communication Sciences and Disorders</li>
+                        <li>---</li>
+                        <li>Graduated <em>summa cum laude</em></li>
+                    </ul>  
+                </div>
+            </div>
+            
+            <a href="webcontent/KillileaResume.pdf" target="_blank">Check Out My Resume</a> <!-- link to PDF resume  -->
+        </section>
+    </main>  
+
+     <?php include 'footer.php'; ?>
+</body>
+
+</html>
